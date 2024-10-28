@@ -12,19 +12,19 @@ const choices = ["グー", "チョキ", "パー"];
 /**
  * ユーザーが勝利したかを判定して、判定結果のメッセージを決めます。
  *
- * @param {number} selectedByUser
+ * @param {number} selectedByUsers
  * @param {number} selectedByCPU
  * @returns 判定結果のメッセージ
  */
-function rockPaperScissorsJudgment(selectedByUser, selectedByCPU) {
-	if (selectedByUser || selectedByCPU) {
-		if (selectedByCPU === selectedByUser) {
+function rockPaperScissorsJudgment(selectedByUsers, selectedByCPU) {
+	if (selectedByUsers || selectedByCPU) {
+		if (selectedByCPU === selectedByUsers) {
 			return "<strong>あいこ</strong> です！あいこで？";
-		} else if (selectedByUser === 0 && selectedByCPU === 1) {
+		} else if (selectedByUsers === 0 && selectedByCPU === 1) {
 			return "あなたの<strong>【勝ち】</strong>です！おめでとうございます！";
-		} else if (selectedByUser === 1 && selectedByCPU === 2) {
+		} else if (selectedByUsers === 1 && selectedByCPU === 2) {
 			return "あなたの<strong>【勝ち】</strong>です！おめでとうございます！";
-		} else if (selectedByUser === 2 && selectedByCPU === 0) {
+		} else if (selectedByUsers === 2 && selectedByCPU === 0) {
 			return "あなたの<strong>【勝ち】</strong>です！おめでとうございます！";
 		} else {
 			return "あなたの<strong>【負け】</strong>です！残念でした！";
