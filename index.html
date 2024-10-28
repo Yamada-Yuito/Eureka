@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git勉強会</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>Gitの勉強会へようこそ！</h1>
-</body>
-</html>
 
+<head>
+	<meta charset="utf-8" />
+	<title>じゃんけんゲーム</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="index.js"></script>
+</head>
+
+<body>
+	<main>
+		<div>
+			<h1>じゃんけんゲーム</h1>
+			<div class="question">
+				GoogleChrome 開発者モードを開き、Sourceタブをクリックしてください。<br>
+				HTMLファイルに以下のコメントがありますので、テキストエディタで実装してみてください。<br>
+				<div class="code">
+					// --------------------------------<br />
+					// ↓↓↓ 解答を記述してみてください。↓↓↓<br />
+					// --------------------------------<br />
+					// TODO: CPU が出す手は毎回ランダムで生成します。<br />
+					<br />
+					<br />
+					// TODO: ユーザーが勝利したかを判定して、判定結果のメッセージを決めます。<br />
+					<br />
+					<br />
+					// TODO: ユーザーが選択した内容をHTMLへ反映します。<br />
+					<br />
+					<br />
+					// TODO: 相手（CPU）が選択した内容をHTMLへ反映します。<br />
+					<br />
+					<br />
+					// TODO: じゃんけんの判定結果をHTMLへ反映します。<br />
+					<br />
+					<br />
+					// --------------------------------<br />
+					// ↑↑↑ 解答を記述してみてください。↑↑↑<br />
+					// --------------------------------<br />
+				</div>
+				実装できたら、以下のボタンをクリックして動作を確認してみましょう！<br>
+			</div>
+			<br>
+			じゃんけんをします。あなたが出す手を選択してください。<br>
+			<button onclick="rockPaperScissors(0);">グー</button>
+			<button onclick="rockPaperScissors(1);">チョキ</button>
+			<button onclick="rockPaperScissors(2);">パー</button>
+			<br />
+			<div>
+				<p id="resultUser"></p>
+				<p id="resultCPU"></p>
+				<p id="afterJudgment" class="afterJudgment">
+					ジャンケンの結果は・・・？
+				</p>
+				<p id="judgment" class="judgment"></p>
+			</div>
+	</main>
+</body>
+
+</html>
