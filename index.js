@@ -17,20 +17,19 @@ const choices = ["グー", "チョキ", "パー"];
  * @returns 判定結果のメッセージ
  */
 function rockPaperScissorsJudgment(selectedByUser, selectedByCPU) {
-	if (selectedByUser || selectedByCPU) {
-		if (selectedByCPU === selectedByUser) {
-			return "<strong>あいこ</strong> です！あいこで？";
-		} else if (selectedByUser === 0 && selectedByCPU === 1) {
-			return "あなたの<strong>【勝ち】</strong>です！おめでとうございます！";
-		} else if (selectedByUser === 1 && selectedByCPU === 2) {
-			return "あなたの<strong>【勝ち】</strong>です！おめでとうございます！";
-		} else if (selectedByUser === 2 && selectedByCPU === 0) {
-			return "あなたの<strong>【勝ち】</strong>です！おめでとうございます！";
-		} else {
-			return "あなたの<strong>【負け】</strong>です！残念でした！";
-		}
-	} else {
+	if (selectedByUser == undefined || selectedByCPU == undefined) {
 		return "バグですYO";
+	}
+	if (selectedByCPU === selectedByUser) {
+		return "<strong>あいこ</strong> です！あいこで？";
+	} else if (selectedByUser === 0 && selectedByCPU === 1) {
+		return "あなたの<strong>【勝ち】</strong>です！おめでとうございます！";
+	} else if (selectedByUser === 1 && selectedByCPU === 2) {
+		return "あなたの<strong>【勝ち】</strong>です！おめでとうございます！";
+	} else if (selectedByUser === 2 && selectedByCPU === 0) {
+		return "あなたの<strong>【勝ち】</strong>です！おめでとうございます！";
+	} else {
+		return "あなたの<strong>【負け】</strong>です！残念でした！";
 	}
 }
 
